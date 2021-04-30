@@ -1,0 +1,787 @@
+/*nor*/
+
+body,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+* {
+    box-sizing: border-box;
+    line-height: 120%;
+}
+
+/*lib*/
+:root {
+    --site-width: 1280px;
+}
+
+.container {
+    max-width: var(--site-width);
+    margin: 0 auto;
+}
+
+@media(max-width : 1320px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+#wrap {
+    width: 100%;
+}
+
+header {
+    width: 100%;
+}
+
+.section {
+    width: 100%;
+}
+
+/*cus*/
+
+header {
+    width: 100%;
+    border-top: 5px solid #009223;
+    height: 165px;
+}
+
+header > a img {
+    display: block;
+    margin-top: 33px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header .container01 {
+    width: 1280px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 헤더 로그인 영역 */
+header .container01 > .log-in {
+    position: absolute;
+    top: 40px;
+    right: 35px;
+}
+
+header .container01 > .log-in ul li {
+    float: left;
+    display: block;
+    letter-spacing: -2px;
+}
+
+header .container01 > .log-in ul li a {
+    font-size: 13px;
+    color: #666666;
+    display: block;
+    line-height: 30px;
+    padding: 0 15px;
+}
+
+/* 헤더 메뉴 */
+header .menu {
+    margin-left: auto;
+    margin-right: auto;
+    width: 990px;
+    margin-top: 20px;
+}
+
+header .menu > ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header .menu > ul li {
+    float: left;
+    padding-top: 18px;
+    width: 165px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: -1.5px;
+    display: block;
+    font-size: 18px;
+}
+
+header .menu li a {
+    display: block;
+    padding: 10px;
+    padding-bottom: 33px;
+
+}
+
+header .menu li:hover > a {
+    color: #009223;
+}
+
+div.submenu {
+    width: 100%;
+    background-color: #999;
+}
+
+div.submenu div.container {
+    width: 990px;
+}
+
+div.submenu div.container ul {}
+
+div.submenu div.container ul li {}
+
+div.submenu div.container ul li a {}
+
+div.submenu div.container ul li:hover > a {}
+
+
+
+/* 슬라이더 섹션 */
+.section {
+    min-height: 300px;
+}
+
+.section01 .slide {
+    width: 100%;
+    height: 440px;
+    overflow: hidden;
+    display: block;
+}
+
+.slide .slider {
+    position: relative;
+}
+
+.slide .slider a {
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+.slide .slider a img {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slide .slider a:first-child {
+    left: 0;
+}
+
+.slide .slider a:nth-child(2) {
+    left: 1920px;
+}
+
+.slide .slider a:nth-child(3) {
+    left: 3840px;
+}
+
+.slide .slider a:nth-child(4) {
+    left: 5760px;
+}
+
+.quick-link {
+    position: absolute;
+    left: 50%;
+    top: 560px;
+    width: 1170px;
+    margin-right: -585px;
+    text-align: right;
+    z-index: 5;
+    overflow: hidden;
+    font-size: 22px;
+}
+
+.quick01 {
+    width: 300px;
+    height: 80px;
+    background-color: #ffce32;
+    text-align: center;
+    float: left;
+    padding: 3px 0 0 0;
+    border-radius: 30px 0 0 0;
+}
+
+.quick01 a {
+    display: block;
+    width: 300px;
+    height: 80px;
+    padding-top: 18px;
+}
+
+.quick01 a strong {
+    letter-spacing: -1px;
+}
+
+.quick01 a strong::before {
+    content: "";
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.quick01 a > img {
+    width: 24px;
+    height: 30px;
+    position: relative;
+    top: 7px;
+}
+
+.quick02 {
+    width: 300px;
+    height: 80px;
+    background-color: #009223;
+    text-align: center;
+    float: left;
+    border-radius: 0 0 30px 0;
+    color: white;
+}
+
+.quick02 a {
+    display: block;
+    width: 300px;
+    height: 80px;
+    padding-top: 18px;
+}
+
+.quick02 a strong {
+    letter-spacing: -1px;
+}
+
+.quick02 a strong::before {
+    content: "";
+    display: inline-block;
+    padding-right: 8px;
+}
+
+.quick02 a img {
+    width: 34px;
+    height: 30px;
+    position: relative;
+    top: 7px;
+}
+
+.section.section02 {
+    height: 560px;
+    padding: 60px 0;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    width: 100%;
+}
+
+/*팝업*/
+
+.layer {
+    position: fixed;
+    left: 100px;
+    top: 0;
+    z-index: 10;
+    display: none;
+}
+
+/*써브웨이 메뉴*/
+.SMslide {
+    width: 100%;
+    position: relative;
+}
+
+.subway-menu {}
+.subway-menu .container {
+}
+
+.subway-menu .ht {
+    position: relative;
+}
+
+.subway-menu .ht h2 {
+    font-size: 40px;
+    background: url(/img/bul_tit.png) 0 12px no-repeat;
+    padding: 22px 0 0 25px;
+    font-weight: bold;
+}
+
+.subway-menu .ht .tab {
+    position: absolute;
+    top: 44px;
+    right: 0;
+}
+
+.subway-menu .ht .tab ul {}
+
+.subway-menu .ht .tab li {
+    float: left;
+    position: relative;
+    padding: 0 0 0 20px;
+    margin-left: 23px;
+    color: #666666;
+}
+
+.subway-menu .ht .tab li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 1px;
+    height: 15px;
+    background-color: #dddddd;
+}
+
+.subway-menu .ht .tab li:first-child::after {
+    display: none;
+}
+
+.subway-menu .ht .tab li.active a {
+    color: #009223;
+}
+
+.subway-menu .ht .tab li a {
+    font-size: 16px;
+    display: block;
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    font-weight: bold;
+}
+
+.swiper-container {
+    width: 1200px;
+    height: 320px;
+}
+
+.swiper-slide {
+    text-align: center;
+    width: 1200px;
+}
+
+.swiper-container .wrap .img img {
+    width: 100%;
+    height: 182px;
+    float: left;
+}
+
+.swiper-container strong {
+    font-size: 18px;
+    display: block;
+}
+
+.swiper-container p {
+    font-size: 13px;
+    line-height: 21px;
+    width: 260px;
+    color: #999999;
+    letter-spacing: -1.0px;
+}
+
+#f1,
+#p1,
+#m1 {
+    display: none;
+}
+
+
+
+.button-next {
+    background: url(https://www.subway.co.kr/images/news/icon_event_slider_arr.png) 0 0 no-repeat;
+    position: absolute;
+    left: 0px;
+    z-index: 100;
+    top: 100px;
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    background-position: 0 0;
+}
+
+.button-next:hover {
+    background-position: 0 -50px;
+    cursor: pointer;
+}
+
+.button-prev {
+    background: url(https://www.subway.co.kr/images/news/icon_event_slider_arr.png) no-repeat;
+    position: absolute;
+    right: 0px;
+    z-index: 100;
+    top: 100px;
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    background-position: -50px 0;
+}
+
+.button-prev:hover {
+    background-position: -50px -50px;
+    cursor: pointer;
+}
+
+
+/*써브웨이 메뉴 끝*/
+
+.section.section03 {
+    background: url(https://www.subway.co.kr/images/main/bg_content.gif) 0 0 repeat;
+    height: 790px;
+}
+
+.section.section03 img {
+    position: relative;
+}
+
+.section.section03 ul li {
+    position: absolute;
+}
+
+.section03 .contents {
+    width: 1280px;
+    height: 630px;
+    padding-top: 65px;
+}
+
+.use {
+    float: left;
+    width: 400px;
+    height: 300px;
+    position: relative;
+}
+
+.use ul {}
+
+.use ul li {
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 40px;
+    letter-spacing: -0.03em;
+    position: absolute;
+    left: 39px;
+    top: 38px;
+}
+
+
+.use > li > a {
+    display: block;
+    font-size: 16px;
+    line-height: 36px;
+    position: absolute;
+    text-align: center;
+    padding: 0 15px;
+    top: 215px;
+    left: 45px;
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 20px
+}
+
+.img-hs {
+    float: left;
+    width: 825px;
+    height: 300px;
+    position: relative;
+}
+
+.img-hs > div > ul > li {
+    position: absolute;
+    left: 430px;
+    top: 38px;
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 40px;
+    letter-spacing: -1.5px;
+}
+
+.img-hs > div > li > a {
+    display: block;
+    font-size: 16px;
+    line-height: 36px;
+    position: absolute;
+    text-align: center;
+    padding: 0 15px;
+    top: 215px;
+    left: 430px;
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 20px
+}
+
+
+.news {
+    width: 880px;
+    height: 300px;
+    background-color: #fff;
+    float: left;
+    margin-top: 30px;
+    border-radius: 30px 0 30px 0;
+    position: relative;
+}
+
+.news .n-head {
+    position: absolute;
+    top: 75px;
+    left: 60px;
+    width: 400px;
+    height: 400px;
+}
+
+.news .n-head h2 {
+    position: absolute;
+    z-index: 10;
+    left: 25px;
+    top: -8px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.news .n-head img {
+    position: absolute;
+}
+
+.news .n-head li {
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+    top: 75px;
+    left: 20px;
+    position: absolute;
+    line-height: 25px;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+.news .n-contents {
+    position: absolute;
+    left: 390px;
+    top: 75px;
+}
+
+.news .n-contents .n-notice {}
+
+.news .n-contents .n-notice > li {
+    padding: 9px;
+}
+
+.news .n-contents .n-notice > li a {
+    letter-spacing: -1px;
+}
+
+.news .n-contents .n-notice > li:hover > a {
+    text-decoration: underline;
+    color: #009223;
+}
+
+.news .n-contents .more {
+    padding: 23px 10px;
+    font-size: 15px;
+    color: #999999;
+}
+
+.mini-logo {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    float: left;
+}
+
+
+.mini-logo img {
+    padding-top: 30px;
+    padding-left: 20px;
+}
+
+.mini-logo li a {
+
+    background-color: #ffc300;
+    border-radius: 5px;
+    position: absolute;
+    content: "";
+    display: block;
+    width: 30px;
+    height: 10px;
+    top: 50px;
+    left: 240px;
+    z-index: 10;
+}
+
+.quick_menu {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px 0 37px;
+}
+
+.quick_menu ul {
+    overflow: hidden;
+    display: inline-block;
+}
+
+.quick_menu ul li {
+    float: left;
+    margin-left: 80px;
+}
+
+.quick_menu ul li:first-child {
+    margin-left: 0;
+
+}
+
+.quick_menu ul li a {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 70px;
+    padding-left: 90px;
+}
+
+.quick_menu ul li div.icon {
+    background: url(https://www.subway.co.kr/images/main/icon_quickmenu.png) no-repeat;
+    width: 70px;
+    height: 70px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    display: block;
+}
+
+.quick_menu ul li.qm01 div.icon {}
+
+.quick_menu ul li.qm02 div.icon {
+    background-position: -70px 0;
+}
+
+.quick_menu ul li.qm03 div.icon {
+    background-position: -140px 0;
+}
+
+.quick_menu ul li.qm04 div.icon {
+    background-position: -210px 0;
+}
+
+
+.quick_menu ul li a strong {
+    color: #292929;
+    font-size: 18px;
+    display: block;
+    margin-top: 12px;
+    text-align: left;
+    letter-spacing: -1px;
+}
+
+.quick_menu ul li a span {
+    color: #999999;
+    font-size: 13px;
+    display: block;
+    margin-top: 6px;
+    text-align: left;
+    letter-spacing: -0.5px;
+}
+
+footer {
+    background-color: #292929;
+    color: #666666;
+    padding: 22px 0;
+    position: relative;
+    z-index: 9;
+}
+
+footer .container {
+    position: relative;
+}
+
+footer .container .f-contents {
+    margin-bottom: 25px;
+}
+
+footer .container .f-contents > ul {
+    overflow: hidden;
+}
+
+footer .container .f-contents > ul li {
+    float: left;
+    margin-right: 29px;
+}
+
+footer .container .f-contents ul li a {
+    color: #666666;
+    display: block;
+    font-size: 14px;
+    letter-spacing: -0.5px;
+}
+
+footer .container .f-contents ul li a strong {
+    color: #bbbbbb;
+}
+
+footer .container span {
+    position: relative;
+    display: inline-block;
+    margin-top: 19px;
+    font-size: 13px;
+    padding-left: 9px;
+    margin-left: 3px;
+    letter-spacing: -0.1px;
+}
+
+footer .container span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 2px;
+    height: 10px;
+    background-color: #666666;
+}
+
+footer .container span.first {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+footer .container span.first::after {
+    display: none;
+}
+
+footer .container p {
+    font-size: 13px;
+    line-height: 25px;
+    padding-top: 2px;
+    margin-top: -1px;
+    letter-spacing: 0.05px;
+}
+
+footer .container .sns-a {
+    position: absolute;
+    bottom: 3px;
+}
+
+footer .container .instar {
+    background: url(https://www.subway.co.kr/images/common/icon_sns_instar.png) no-repeat;
+    width: 50px;
+    height: 50px;
+    right: 105px;
+}
+
+footer .container .instar:hover {
+    background-position: -50px 0;
+}
+
+footer .container .faceb {
+    background: url(https://www.subway.co.kr/images/common/icon_sns_facebook.png) no-repeat;
+    width: 50px;
+    height: 50px;
+    right: 40px;
+}
+
+
+footer .container .faceb:hover {
+    background-position: -50px 0;
+}
