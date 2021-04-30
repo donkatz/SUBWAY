@@ -118,7 +118,7 @@ header .menu > ul li {
 header .menu li a {
     display: block;
     padding: 10px;
-    padding-bottom: 33px;
+    padding-bottom: 23px;
 
 }
 
@@ -126,22 +126,50 @@ header .menu li:hover > a {
     color: #009223;
 }
 
+/*서브메뉴*/
+
 div.submenu {
     width: 100%;
-    background-color: #999;
+    background-color: #fff;
+    position: absolute;
+    z-index: 10;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    display: none;
 }
 
 div.submenu div.container {
     width: 990px;
+    height: 260px;
+    padding-top: 20px;
+    display: flex;
 }
 
-div.submenu div.container ul {}
+div.submenu div.container ul {
+    height: 100%;
+}
 
-div.submenu div.container ul li {}
+div.submenu div.container ul strong {
+    display: none;
+}
 
-div.submenu div.container ul li a {}
+div.submenu div.container ul li {
+    width: 165px;
+    text-align: center;
+}
 
-div.submenu div.container ul li:hover > a {}
+div.submenu div.container ul li a {
+    font-size: 15px;
+    color: #888888;
+    display: block;
+    padding: 8px 0 9px;
+    letter-spacing: -1px;
+    width: 165px;
+}
+
+div.submenu div.container ul li:hover > a {
+    color: #009223;
+    text-decoration: underline;
+}
 
 
 
@@ -297,8 +325,8 @@ div.submenu div.container ul li:hover > a {}
 }
 
 .subway-menu {}
-.subway-menu .container {
-}
+
+.subway-menu .container {}
 
 .subway-menu .ht {
     position: relative;
@@ -388,7 +416,7 @@ div.submenu div.container ul li:hover > a {}
     display: none;
 }
 
-
+/*사진 확대 transform : scale*/
 
 .button-next {
     background: url(https://www.subway.co.kr/images/news/icon_event_slider_arr.png) 0 0 no-repeat;
@@ -396,7 +424,6 @@ div.submenu div.container ul li:hover > a {}
     left: 0px;
     z-index: 100;
     top: 100px;
-    border: 1px solid black;
     width: 50px;
     height: 50px;
     background-position: 0 0;
@@ -413,7 +440,6 @@ div.submenu div.container ul li:hover > a {}
     right: 0px;
     z-index: 100;
     top: 100px;
-    border: 1px solid black;
     width: 50px;
     height: 50px;
     background-position: -50px 0;
@@ -423,7 +449,6 @@ div.submenu div.container ul li:hover > a {}
     background-position: -50px -50px;
     cursor: pointer;
 }
-
 
 /*써브웨이 메뉴 끝*/
 
@@ -444,11 +469,13 @@ div.submenu div.container ul li:hover > a {}
     width: 1280px;
     height: 630px;
     padding-top: 65px;
+    padding-left: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .use {
-    float: left;
-    width: 400px;
     height: 300px;
     position: relative;
 }
@@ -461,7 +488,6 @@ div.submenu div.container ul li:hover > a {}
     font-weight: bold;
     line-height: 40px;
     letter-spacing: -0.03em;
-    position: absolute;
     left: 39px;
     top: 38px;
 }
@@ -483,15 +509,13 @@ div.submenu div.container ul li:hover > a {}
 }
 
 .img-hs {
-    float: left;
     width: 825px;
     height: 300px;
     position: relative;
 }
 
 .img-hs > div > ul > li {
-    position: absolute;
-    left: 430px;
+    left: 420px;
     top: 38px;
     color: #fff;
     font-size: 28px;
@@ -508,7 +532,7 @@ div.submenu div.container ul li:hover > a {}
     text-align: center;
     padding: 0 15px;
     top: 215px;
-    left: 430px;
+    left: 420px;
     color: white;
     font-weight: bold;
     border: 2px solid white;
@@ -520,7 +544,6 @@ div.submenu div.container ul li:hover > a {}
     width: 880px;
     height: 300px;
     background-color: #fff;
-    float: left;
     margin-top: 30px;
     border-radius: 30px 0 30px 0;
     position: relative;
