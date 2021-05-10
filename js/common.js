@@ -1,11 +1,12 @@
 $(document).ready(function () {
 
     //    $(".menu > ul > li").mouseover(function () {
-    //        $(".menu > ul > li > ul, ul.submenu::after").stop().slideDown(200);
+    //        $(".submenu > div > ul").stop().slideDown(200);
     //    });
     //    $(".menu > ul > li").mouseout(function () {
-    //        $(".menu > ul > li > ul, ul.submenu::after").stop().slideUp(200);
+    //        $(".submenu > div > ul").stop().slideUp(200);
     //    });
+
 
     function fun() {
         var num = 0;
@@ -24,24 +25,14 @@ $(document).ready(function () {
     }
     fun();
 
-    var Tab = $(".tab > ul > li");
-    var tabCon = $(".SMslide > div");
-    
-    tabCon.hide().eq(0).show();
-    
-    Tab.click(function(e){
-        e.preventDefault();
-        var target = $(this);
-        var index = target.index();
-        Tab.removeClass(".active");
-        target.addClass(".active");
-        tabCon.css("display","none");
-        tabCon.eq(index).css("display","block");
-    })
-    
+    $(".tabBtn li").on("click", function () {
+        var data = $(this).attr("data-rel");
+        var $content = $("." + data);
+        $(this).addClass("on", "acitive").siblings().removeClass("on", "acitive");
+        $content.show().siblings().hide();
+    });
 
-
-    var swiper = new Swiper('.swiper-container', {
+    var swiper = new Swiper('.tab-con .swiper-container', {
         slidesPerView: 4,
         spaceBetween: 30,
         slidesPerGroup: 4,
