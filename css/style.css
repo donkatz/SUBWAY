@@ -308,18 +308,9 @@ div.submenu div.container ul li:hover > a {
     width: 100%;
 }
 
-/*팝업*/
-
-.layer {
-    position: fixed;
-    left: 100px;
-    top: 0;
-    z-index: 10;
-    display: none;
-}
 
 /*써브웨이 메뉴*/
-.SMslide {
+.tab-con {
     width: 100%;
     position: relative;
 }
@@ -339,7 +330,7 @@ div.submenu div.container ul li:hover > a {
     font-weight: bold;
 }
 
-.subway-menu .ht .tab {
+.subway-menu .ht .tab-btn {
     position: absolute;
     top: 44px;
     right: 0;
@@ -347,7 +338,7 @@ div.submenu div.container ul li:hover > a {
 
 .subway-menu .ht .tab ul {}
 
-.subway-menu .ht .tab li {
+.subway-menu .ht .tab-btn li {
     float: left;
     position: relative;
     padding: 0 0 0 20px;
@@ -355,7 +346,7 @@ div.submenu div.container ul li:hover > a {
     color: #666666;
 }
 
-.subway-menu .ht .tab li::after {
+.subway-menu .ht .tab-btn li::after {
     content: "";
     position: absolute;
     left: 0;
@@ -365,15 +356,15 @@ div.submenu div.container ul li:hover > a {
     background-color: #dddddd;
 }
 
-.subway-menu .ht .tab li:first-child::after {
+.subway-menu .ht .tab-btn li:first-child::after {
     display: none;
 }
 
-.subway-menu .ht .tab li.active a {
+.subway-menu .ht .tab-btn li.active a {
     color: #009223;
 }
 
-.subway-menu .ht .tab li a {
+.subway-menu .ht .tab-btn li a {
     font-size: 16px;
     display: block;
     font-weight: 300;
@@ -389,6 +380,10 @@ div.submenu div.container ul li:hover > a {
 .swiper-slide {
     text-align: center;
     width: 1200px;
+}
+
+.swiper-slide:hover .img {
+    transform: scale(1.2);
 }
 
 .swiper-container .wrap .img img {
@@ -410,20 +405,14 @@ div.submenu div.container ul li:hover > a {
     letter-spacing: -1.0px;
 }
 
-#f1,
-#p1,
-#m1 {
-    display: none;
-}
-
 /*사진 확대 transform : scale*/
 
 .button-next {
     background: url(https://www.subway.co.kr/images/news/icon_event_slider_arr.png) 0 0 no-repeat;
     position: absolute;
-    left: 0px;
+    left: 145px;
     z-index: 100;
-    top: 100px;
+    top: 130px;
     width: 50px;
     height: 50px;
     background-position: 0 0;
@@ -437,9 +426,9 @@ div.submenu div.container ul li:hover > a {
 .button-prev {
     background: url(https://www.subway.co.kr/images/news/icon_event_slider_arr.png) no-repeat;
     position: absolute;
-    right: 0px;
+    right: 145px;
     z-index: 100;
-    top: 100px;
+    top: 130px;
     width: 50px;
     height: 50px;
     background-position: -50px 0;
