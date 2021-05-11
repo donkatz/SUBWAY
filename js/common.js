@@ -1,19 +1,19 @@
 $(document).ready(function () {
 
-    //        $(".m-s-menu").mouseover(function () {
-    //            $(".m-s-menu > .submenu div").stop().slideDown(200);
-    //        });
-    //        $(".m-s-menu").mouseout(function () {
-    //            $(".m-s-menu > .submenu div").stop().slideUp(200);
-    //        });
+            $(".m-s-menu").mouseover(function () {
+                $(".m-s-menu > .submenu div").stop().slideDown(200);
+            });
+            $(".m-s-menu").mouseout(function () {
+                $(".m-s-menu > .submenu div").stop().slideUp(200);
+            });
 
-    $(".m-s-menu > .submenu div").hide();
-    $(".m-s-menu").mouseover(function () {
-        $(".m-s-menu > .submenu div").fadeIn().sldieDown(200);
-    });
-    $(".m-s-menu").mouseout(function () {
-        $(".m-s-menu > .submenu div").hide().slideUp(200);
-    });
+//    $(".m-s-menu > .submenu div").hide();
+//    $(".m-s-menu").mouseover(function () {
+//        $(".m-s-menu > .submenu div").fadeIn().sldieDown(200);
+//    });
+//    $(".m-s-menu").mouseout(function () {
+//        $(".m-s-menu > .submenu div").hide().slideUp(200);
+//    });
 
 
     function fun() {
