@@ -1,11 +1,19 @@
 $(document).ready(function () {
 
-    //    $(".menu > ul > li").mouseover(function () {
-    //        $(".submenu > div > ul").stop().slideDown(200);
-    //    });
-    //    $(".menu > ul > li").mouseout(function () {
-    //        $(".submenu > div > ul").stop().slideUp(200);
-    //    });
+    //        $(".m-s-menu").mouseover(function () {
+    //            $(".m-s-menu > .submenu div").stop().slideDown(200);
+    //        });
+    //        $(".m-s-menu").mouseout(function () {
+    //            $(".m-s-menu > .submenu div").stop().slideUp(200);
+    //        });
+
+    $(".m-s-menu > .submenu div").hide();
+    $(".m-s-menu").mouseover(function () {
+        $(".m-s-menu > .submenu div").fadeIn().sldieDown(200);
+    });
+    $(".m-s-menu").mouseout(function () {
+        $(".m-s-menu > .submenu div").hide().slideUp(200);
+    });
 
 
     function fun() {
@@ -25,10 +33,10 @@ $(document).ready(function () {
     }
     fun();
 
-    $(".tabBtn li").on("click", function () {
+    $(".tab-btn li").on("click", function () {
         var data = $(this).attr("data-rel");
         var $content = $("." + data);
-        $(this).addClass("on", "acitive").siblings().removeClass("on", "acitive");
+        $(this).addClass("on", "actived_tab").siblings().removeClass("on", "actived_tab");
         $content.show().siblings().hide();
     });
 
@@ -43,7 +51,7 @@ $(document).ready(function () {
             prevEl: '.button-prev',
         },
         pagination: {
-            el: '.swiper-pagination'
+            el: '.pagination'
         },
     });
 
