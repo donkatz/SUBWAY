@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    $(".m-s-menu > .submenu div").hide();
     $(".m-s-menu").mouseover(function () {
         $(".m-s-menu > .submenu div").stop().slideDown(200);
     });
@@ -49,9 +49,6 @@ $(document).ready(function () {
         navigation: {
             nextEl: '.button-next',
             prevEl: '.button-prev',
-        },
-        pagination: {
-            el: '.pagination'
         },
     });
 
