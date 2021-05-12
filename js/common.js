@@ -7,40 +7,64 @@ $(document).ready(function () {
         $(".m-s-menu > .submenu div").stop().slideUp(200);
     });
 
-    //    $(".m-s-menu > .submenu div").hide();
-    //    $(".m-s-menu").mouseover(function () {
-    //        $(".m-s-menu > .submenu div").fadeIn().sldieDown(200);
-    //    });
-    //    $(".m-s-menu").mouseout(function () {
-    //        $(".m-s-menu > .submenu div").hide().slideUp(200);
-    //    });
-
-
-    function fun() {
-        var num = 0;
-        var result;
-        setInterval(function () {
-            result = num * -1920;
-            num++;
-            console.log(result);
-            if (num == 4) {
-                num = 0;
-            }
-            $(".slider").stop().animate({
-                left: result + 'px'
-            });
-        }, 5000);
-    }
-    fun();
+    
+    var swiper = new Swiper(".slider", {
+        spaceBetween: 0,
+        centeredSlides: true,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".pagination",
+          clickable: true,
+        },
+      });
 
     $(".tab-btn li").on("click", function () {
         var data = $(this).attr("data-rel");
         var $content = $("." + data);
-        $(this).addClass("on", "actived_tab").siblings().removeClass("on", "actived_tab");
+        $(this).addClass("on actived_tab").siblings().removeClass("on actived_tab");
         $content.show().siblings().hide();
     });
 
-    var swiper = new Swiper('.tab-con .swiper-container', {
+    var swiper01 = new Swiper ('.tab-con01 > .swiper-container', {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        slidesPerGroup: 4,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        navigation: {
+            nextEl: '.button-next',
+            prevEl: '.button-prev',
+        },
+    });
+    
+    var swiper02 = new Swiper ('.tab-con02 > .swiper-container', {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        slidesPerGroup: 4,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        navigation: {
+            nextEl: '.button-next',
+            prevEl: '.button-prev',
+        },
+    });
+    
+    var swiper03 = new Swiper ('.tab-con03 > .swiper-container', {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        slidesPerGroup: 4,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        navigation: {
+            nextEl: '.button-next',
+            prevEl: '.button-prev',
+        },
+    });
+    
+    var swiper04 = new Swiper ('.tab-con04 > .swiper-container', {
         slidesPerView: 4,
         spaceBetween: 30,
         slidesPerGroup: 4,
