@@ -133,9 +133,10 @@ div.submenu {
     background-color: #fff;
     position: absolute;
     z-index: 10;
-    border-top: 1px solid rgba(0,0,0,0.1);
-/*    display: none;*/
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    /*    display: none;*/
 }
+
 div.submenu.active {
     display: block;
 }
@@ -180,47 +181,65 @@ div.submenu div.container ul li:hover > a {
     min-height: 300px;
 }
 
-.section01 .slide {
+.section01 .slider {
     width: 100%;
     height: 440px;
     overflow: hidden;
     display: block;
 }
 
-.slide .slider {
+.slider {
     position: relative;
 }
 
-.slide .slider a {
+.slider a {
     position: absolute;
     width: 100%;
+    max-width: 1920px;
     margin: 0;
     padding: 0;
     z-index: 1;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
 }
 
-.slide .slider a img {
+.pagination {
+    position: absolute;
+    z-index: 99;
+    display: flex;
+    top: 385px;
+    justify-content: center;
+    margin-left: 500px;
+    width: 100%;
+}
+
+.pagination  span {
+    background-color: #ffc300;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+}
+
+/*
+.pagination > span.active {
+    background-color: #ffc300;
+    width: 30px;
+    height: 10px;
+    margin: 5px;
+}
+*/
+
+/*
+.slider a {
     display: block;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
-
-.slide .slider a:first-child {
-    left: 0;
-}
-
-.slide .slider a:nth-child(2) {
-    left: 1920px;
-}
-
-.slide .slider a:nth-child(3) {
-    left: 3840px;
-}
-
-.slide .slider a:nth-child(4) {
-    left: 5760px;
-}
+*/
 
 /*퀵메뉴*/
 .quick-link {
@@ -303,6 +322,8 @@ div.submenu div.container ul li:hover > a {
     top: 7px;
 }
 
+/*퀵메뉴 끝*/
+
 .section.section02 {
     height: 560px;
     padding: 60px 0;
@@ -362,7 +383,7 @@ div.submenu div.container ul li:hover > a {
     display: none;
 }
 
-.subway-menu .ht .tab-btn >  li.actived_tab a {
+.subway-menu .ht .tab-btn > li.actived_tab a {
     color: #009223;
 }
 
@@ -375,22 +396,41 @@ div.submenu div.container ul li:hover > a {
 }
 
 .swiper-container {
-    width: 1200px;
+    width: 100%;
     height: 320px;
+    max-width: 1200px;
 }
 
 .swiper-slide {
     text-align: center;
-    width: 1200px;
 }
 
-.swiper-slide:hover .img {
+.swiper-slide > a:hover > div {
     transform: scale(1.2);
 }
 
-.swiper-container .wrap .img img {
-    width: 100%;
+.swiper-slide > a:hover > div > .icon-btn {
+    background: url(https://www.subway.co.kr/images/main/btn_more.png);
+    width: 98px;
+    height: 98px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-42%, 0%);
+}
+
+.swiper-slide > a:hover > div > p {
+    display: none;
+}
+
+
+.swiper-container .wrap .img {
+    overflow: hidden;
+}
+
+.swiper-container .wrap .img > img {
     height: 182px;
+    width: 100%;
     float: left;
 }
 
@@ -405,6 +445,30 @@ div.submenu div.container ul li:hover > a {
     width: 260px;
     color: #999999;
     letter-spacing: -1.0px;
+}
+
+@media ( min-width:1680px ) {
+    .button-next {
+        left: 200px;
+    }
+}
+
+@media ( max-width:1679px ) {
+    .button-next {
+        display: none;
+    }
+}
+
+@media ( min-width:1680px ) {
+    .button-prev {
+        right: 200px;
+    }
+}
+
+@media ( max-width:1679px ) {
+    .button-prev {
+        display: none;
+    }
 }
 
 .button-next {
