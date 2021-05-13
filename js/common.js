@@ -12,7 +12,7 @@ $(document).ready(function () {
         spaceBetween: 0,
         centeredSlides: true,
         autoplay: {
-          delay: 3500,
+          delay: 5500,
           disableOnInteraction: false,
         },
         pagination: {
@@ -34,6 +34,8 @@ $(document).ready(function () {
         slidesPerGroup: 4,
         loop: true,
         loopFillGroupWithBlank: true,
+        observer: true,
+        observeParents: true,
         navigation: {
             nextEl: '.button-next',
             prevEl: '.button-prev',
@@ -46,10 +48,13 @@ $(document).ready(function () {
         slidesPerGroup: 4,
         loop: true,
         loopFillGroupWithBlank: true,
+        observer: true,
+        observeParents: true,
         navigation: {
             nextEl: '.button-next',
             prevEl: '.button-prev',
         },
+        
     });
     
     var swiper03 = new Swiper ('.tab-con03 > .swiper-container', {
@@ -58,6 +63,8 @@ $(document).ready(function () {
         slidesPerGroup: 4,
         loop: true,
         loopFillGroupWithBlank: true,
+        observer: true,
+        observeParents: true,
         navigation: {
             nextEl: '.button-next',
             prevEl: '.button-prev',
@@ -70,6 +77,8 @@ $(document).ready(function () {
         slidesPerGroup: 4,
         loop: true,
         loopFillGroupWithBlank: true,
+        observer: true,
+        observeParents: true,
         navigation: {
             nextEl: '.button-next',
             prevEl: '.button-prev',
