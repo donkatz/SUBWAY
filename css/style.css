@@ -8,6 +8,10 @@ li {
     list-style: none;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -212,7 +216,6 @@ div.submenu div.container ul li:hover > a {
     display: flex;
     top: 385px;
     justify-content: center;
-    margin-left: 500px;
     width: 100%;
 }
 
@@ -223,31 +226,13 @@ div.submenu div.container ul li:hover > a {
     margin: 5px;
 }
 
-/*
-.pagination > span.active {
-    background-color: #ffc300;
-    width: 30px;
-    height: 10px;
-    margin: 5px;
-}
-*/
-
-/*
-.slider a {
-    display: block;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-*/
-
 /*퀵메뉴*/
 .quick-link {
     position: absolute;
     left: 49%;
     top: 580px;
     width: 1170px;
-    margin-right: -585px;
+/*    margin-right: -585px;*/
     text-align: right;
     z-index: 5;
     overflow: hidden;
@@ -333,6 +318,7 @@ div.submenu div.container ul li:hover > a {
 
 
 /*써브웨이 메뉴*/
+
 .tab-con {
     width: 100%;
     position: relative;
@@ -401,6 +387,10 @@ div.submenu div.container ul li:hover > a {
     max-width: 1200px;
 }
 
+.swiper-wrapper {
+    transform: translate3d(0,0,0);
+}
+
 .swiper-slide {
     text-align: center;
 }
@@ -427,6 +417,7 @@ div.submenu div.container ul li:hover > a {
 .swiper-container .wrap .img {
     overflow: hidden;
 }
+
 
 .swiper-container .wrap .img > img {
     height: 182px;
@@ -471,6 +462,7 @@ div.submenu div.container ul li:hover > a {
     }
 }
 
+
 .button-next {
     background: url(https://www.subway.co.kr/images/news/icon_event_slider_arr.png) 0 0 no-repeat;
     position: absolute;
@@ -508,6 +500,7 @@ div.submenu div.container ul li:hover > a {
 .section.section03 {
     background: url(https://www.subway.co.kr/images/main/bg_content.gif) 0 0 repeat;
     height: 790px;
+    width: 100%;
 }
 
 .section.section03 img {
