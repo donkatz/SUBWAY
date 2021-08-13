@@ -67,7 +67,7 @@ header > a img {
 }
 
 header .container01 {
-    width: 1280px;
+    max-width: 1280px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -98,7 +98,7 @@ header .container01 > .log-in ul li a {
 header .menu {
     margin-left: auto;
     margin-right: auto;
-    width: 990px;
+    max-width: 990px;
     margin-top: 20px;
 }
 
@@ -146,7 +146,7 @@ div.submenu.active {
 }
 
 div.submenu div.container {
-    width: 990px;
+    max-width: 990px;
     height: 260px;
     padding-top: 20px;
     display: flex;
@@ -231,7 +231,7 @@ div.submenu div.container ul li:hover > a {
     position: absolute;
     left: 49%;
     top: 580px;
-    width: 1170px;
+    max-width: 1170px;
 /*    margin-right: -585px;*/
     text-align: right;
     z-index: 5;
@@ -512,7 +512,7 @@ div.submenu div.container ul li:hover > a {
 }
 
 .section03 .contents {
-    width: 1280px;
+    max-width: 1280px;
     height: 630px;
     padding-top: 65px;
     padding-left: 40px;
@@ -526,7 +526,7 @@ div.submenu div.container ul li:hover > a {
     position: relative;
 }
 
-.use ul {}
+
 
 .use ul li {
     color: #fff;
@@ -587,7 +587,7 @@ div.submenu div.container ul li:hover > a {
 
 
 .news {
-    width: 880px;
+    max-width: 880px;
     height: 300px;
     background-color: #fff;
     margin-top: 30px;
